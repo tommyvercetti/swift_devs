@@ -14,6 +14,7 @@ enum Medal{
 	case bronze
 }
 
+
 let medal = Medal.bronze
 
 
@@ -148,7 +149,13 @@ case .nonalco:
 //5) Создать enum со всеми цветами радуги. Создать функцию, которая содержит названия разных предметов или объектов. Пример результата в консоли "apple green", "sun red" и т.д.
 
 enum RainbowColours {
-	case red, orange, yellow, green, blue, indigo, violet
+	case red
+	case orange
+	case yellow
+	case green
+	case blue
+	case indigo
+	case violet
 }
 
 func showItemsName (item: RainbowColours){
@@ -158,17 +165,17 @@ func showItemsName (item: RainbowColours){
 	case RainbowColours.red:
 		print("\(itemsArray[2]) is red")
 	case RainbowColours.orange:
-		print("\(itemsArray[1]) is apple")
+		print("\(itemsArray[1]) is orange")
 	case RainbowColours.yellow:
 		print("\(itemsArray[9]) is yellow")
 	case RainbowColours.green:
-		print("\(itemsArray[2]) is red")
+		print("\(itemsArray[8]) is green")
 	case RainbowColours.blue:
-		print("\(itemsArray[2]) is red")
+		print("\(itemsArray[0]) is blue")
 	case RainbowColours.indigo:
-		print("\(itemsArray[2]) is red")
+		print("\(itemsArray[7]) is indigo")
 	case RainbowColours.violet:
-		print("\(itemsArray[2]) is red")
+		print("\(itemsArray[10]) is violet")
 	
 		
 		
@@ -176,11 +183,28 @@ func showItemsName (item: RainbowColours){
 	}
 }
 	showItemsName(item: .red)
-
-
-
+	showItemsName(item: .orange)
+	showItemsName(item: .violet)
 
 //6) Создать функцию, которая выставляет оценки ученикам в школе.
+
+var arrayOfStudents = [name:surname]()
+
+func fillTheStudentsClass (name:String, surname:String){
+	let ammountOfStudents = 10
+	
+	for ammountOfStudents in arrayOfStudents {
+		arrayOfStudents.append(name:"Andrian", surname:"Kryk")
+	}
+	
+}
+
+func takeGrade (grade: Int) {
+	
+}
+
+
+
 //7) Создать программу, которая "рассказывает" - какие автомобили стоят в гараже.
 
 
