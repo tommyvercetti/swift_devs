@@ -82,50 +82,59 @@ enum razlichnyeTipy{
 }
 
 //4) Создайте несколько своих enum, названия какие хотите: например, анкета сотрудника - пол, возраст,ФИО, стаж. Используйте switch как в видео.
-enum anketaForActivities{
-	case golf
-	case trampoline
-	case Robots
-	case segways
-	case playground
-	enum waterActivities {
+enum AnketaForActivities{
+    enum ground {
+        case golf
+        case trampoline
+        case Robots
+        case segways
+        case playground
+    }
+	enum water {
 		case pool
 		case catamarans
 	}
 }
 
-let activities = anketaForActivities.golf
+let activities = AnketaForActivities.ground.golf
 
 switch activities {
-case anketaForActivities.golf:
+case .golf:
 	print("Wanna run balls?")
-case anketaForActivities.trampoline:
+case .trampoline:
 	print("Wanna jump?")
-case anketaForActivities.Robots:
+case .Robots:
 	print("Wanna rule terminators?")
-case anketaForActivities.segways:
+case .segways:
 	print("Wanna ride?")
-case anketaForActivities.playground:
+case .playground:
 	print("Wanna play with kids?")
-	//case anketaForActivities.waterActivities.catamarans:
-	//	print("Wanna ride on lake?")
-	//case anketaForActivities.waterActivities.pool:
-	//	print("Wanna swim?")
-	
+}
+
+let waterActivities = AnketaForActivities.water.pool
+
+switch waterActivities {
+case AnketaForActivities.water.catamarans:
+    print("catamarans ride")
+case AnketaForActivities.water.pool:
+    print("pool party")
 }
 
 
-enum AnketaForEat{
-	case meat
-	case fish
-	case vegetables
+
+enum AnketaForParty{
+    enum food {
+        case meat
+        case fish
+        case vegetables
+    }
 	enum beverages{
 		case alco
 		case nonalco
 	}
 	
 }
-let whatToEat = AnketaForEat.meat
+let whatToEat = AnketaForParty.food.meat
 
 switch whatToEat {
 case .meat:
@@ -135,7 +144,7 @@ case .fish:
 case .vegetables:
 	print("vegies")
 }
-let whatToDrink = AnketaForEat.beverages.alco
+let whatToDrink = AnketaForParty.beverages.alco
 
 switch whatToDrink {
 case .alco:
@@ -188,19 +197,21 @@ func showItemsName (item: RainbowColours){
 
 //6) Создать функцию, которая выставляет оценки ученикам в школе.
 
-var arrayOfStudents = [name:surname]()
+var arrayOfStudents = [Int:String] ()
+arrayOfStudents.
 
-func fillTheStudentsClass (name:String, surname:String){
-	let ammountOfStudents = 10
-	
-	for ammountOfStudents in arrayOfStudents {
-		arrayOfStudents.append(name:"Andrian", surname:"Kryk")
-	}
-	
-}
+
+//func fillTheStudentsClass (name:String, surname:String){
+//    let ammountOfStudents = 10
+//
+//    for ammountOfStudents in arrayOfStudents {
+//        arrayOfStudents.append(name:"Andrian", surname:"Kryk")
+//    }
+//
+//}
 
 func takeGrade (grade: Int) {
-	
+
 }
 
 
