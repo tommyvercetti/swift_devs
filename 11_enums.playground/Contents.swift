@@ -186,44 +186,43 @@ func showItemsName (item: RainbowColours){
 	case RainbowColours.violet:
 		print("\(itemsArray[10]) is violet")
 	
-		
-		
 	break
 	}
 }
 	showItemsName(item: .red)
 	showItemsName(item: .orange)
 	showItemsName(item: .violet)
+    
 
 //6) Создать функцию, которая выставляет оценки ученикам в школе.
 
-var arrayOfStudents = [Int:String] ()
-arrayOfStudents.
 
 
-//func fillTheStudentsClass (name:String, surname:String){
-//    let ammountOfStudents = 10
-//
-//    for ammountOfStudents in arrayOfStudents {
-//        arrayOfStudents.append(name:"Andrian", surname:"Kryk")
-//    }
-//
-//}
-
-func takeGrade (grade: Int) {
-
+enum pupils:String {
+    case Andrian = "Andrian Kryk"
+    case Vasiliy = "Vasiliy Pupkin"
+    case Petrov = "Andrei Petrov"
 }
 
+func takeGrade (student: pupils, grade:Int) {
+    print("\(student.rawValue) will take \(grade) stars")
+}
+takeGrade(student: pupils.Andrian, grade: 5)
 
 
 //7) Создать программу, которая "рассказывает" - какие автомобили стоят в гараже.
 
 
+enum cars:String {
+    case lada = "kalina"
+    case mercedes = "600"
+    case ford = "mustang"
+    static let all = [lada,mercedes,ford]
+}
 
-
-
-
-
+for cars in cars.all {
+    print(cars.rawValue)
+}
 
 
 
